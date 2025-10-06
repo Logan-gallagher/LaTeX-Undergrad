@@ -1,0 +1,120 @@
+\documentclass[twocolumn]{book}
+\usepackage{standalone}%
+\usepackage{amsmath}%
+\usepackage{amssymb}
+\usepackage[a4paper,margin=1in]{geometry}
+\begin{document}
+
+% ---- TITLE PAGE ---- %
+
+\begin{titlepage}
+    \centering
+    \vspace*{4cm}
+    
+    {\Huge MATH 217 - Advanced Honors Calculus I: \par}
+    \vspace{0.5cm}
+
+    {\Huge Logan's Notes \par}
+    \vspace{0.5cm}
+
+    {\itshape Logan Gallagher}
+    \vspace{0.5cm} 
+    
+    {\large September 2025 \par}
+\end{titlepage}
+
+
+
+% ---- CHAPTER 1 ---- %
+% ---- WEEK 1 ---- %
+% ---- LECTURE 1 ---- %
+
+\chapter{Topology in $\mathbb{R}^N$}
+
+\section{Justification of $\mathbb{R}$}
+\subsection{Definition: Justfication}
+$x$ with property $P(x)$ is justified $\iff \vdash \exists x \, P(x)$
+
+\subsection{The Top Down Approach (Axioms of R)}
+$\exists \mathbb{R} = (R,+,\cdot,<)$ which is formed from 
+\begin{itemize}
+    \item A set $R$ with at least two elements
+    \item Two functions +, $\cdot$ of the form
+
+    $+: R \times R \rightarrow R, \cdot : R \times R \rightarrow R$
+    \item A strict order relation $<$ on $\mathbb{R}$
+
+\end{itemize}
+Which satisfy the following
+
+\begin{enumerate}
+  \item \textbf{Field Axioms:}
+    \begin{enumerate}
+      \item $a+b=b+a$ (commutativity of $+$)
+      \item $a+(b+c)=(a+b)+c$ (associativity of $+$)
+      \item $\exists 0: a+0=a$ (additive identity)
+      \item $\forall a, \exists -a: a+(-a)=0$ (additive inverse)
+      \item $a\cdot b=b\cdot a$ (commutativity of $\cdot$)
+      \item $a\cdot(b\cdot c)=(a\cdot b)\cdot c$ (associativity of $\cdot$)
+      \item $\exists 1\neq 0: a\cdot 1=a$ (multiplicative identity)
+      \item $\forall a\neq 0, \exists a^{-1}: a\cdot a^{-1}=1$ (multiplicative inverse)
+      \item $a\cdot(b+c)=a\cdot b + a\cdot c$ (distributivity)
+    \end{enumerate}
+  \item \textbf{Order Axioms:}
+    \begin{enumerate}
+      \item $a\le b$ or $b\le a$ (totality)
+      \item $a\le b$ and $b\le c \implies a\le c$ (transitivity)
+      \item $a\le b \implies a+c \le b+c$ (addition compatible)
+      \item $0\le a, 0\le b \implies 0\le a\cdot b$ (multiplication compatible)
+    \end{enumerate}
+  \item \textbf{Completeness:} Every nonempty subset of $\mathbb{R}$ bounded above has a least upper bound.
+\end{enumerate}
+
+
+
+\subsection{The Bottom Up Approach}
+\subsubsection{Definition of $\mathcal{N}$}
+We define a set $\mathcal{N}$ and a function $S:\mathcal{N}\to\mathcal{N}$ satisfying:
+
+\begin{enumerate}
+    \item $0 \in \mathcal{N}$.
+    \item $S:\mathcal{N} \to \mathcal{N}$.
+    \item $\forall n,m\in\mathcal{N},\; S(n)=S(m)\implies n=m$ \quad (injectivity).
+    \item $\nexists n\in\mathcal{N} \text{ such that } S(n)=0$.
+    \item \textbf{(Axiom of Induction).}  
+    For any set $K$, if 
+    \begin{enumerate}
+        \item $0\in K$, and
+        \item $\forall n\in\mathcal{N},\; n\in K\implies S(n)\in K$,
+    \end{enumerate}
+    then $\mathcal{N}\subseteq K$.
+\end{enumerate}
+
+% ---- LECTURE 2 ---- %
+\subsubsection{Justification of $\mathbb{N}_0$}
+The set $\mathcal{N}$ can be identified with $\mathbb{N}_0$ through use of the successor function where
+\begin{enumerate}
+    \item $0_{\mathbb{N}_0} :=$ the object $0 = 0_\mathcal{N}$ 
+    \item $1_{\mathbb{N}_0} := S(0_\mathcal{N}) = S(0_{\mathbb{N}_0})$
+    \item $2_{\mathbb{N}_0} := S(S(0_\mathcal{N})) = S(1_{\mathbb{N}_0})$
+        ...
+\end{enumerate}
+\paragraph{Funcions of $\mathbb{N}_0$}
+
+$\exists +: \mathbb{N}_0 \times \mathbb{N}_0 \rightarrow \mathbb{N}_0$
+$\exists +: \mathbb{N}_0 \times \mathbb{N}_0 \rightarrow \mathbb{N}_0$ 
+satisfying
+
+\begin{enumerate}
+    \item Neutral element of addition and multiplication
+    \item Commutativity over addition and multiplication
+    \item Associativity over addition and multiplication
+    \item Distributivity of multiplication over addition
+
+\end{enumerate}
+\subsection{Binary Relation}
+$\mathbb{N}_0$ can be ordered with a total order
+
+
+
+\end{document}
